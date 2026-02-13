@@ -87,14 +87,22 @@
         .contact-item a { color: white; text-decoration: none; transition: 0.3s; }
         .contact-item a:hover { color: var(--accent); }
 
-        .xp-list, .edu-list { list-style: none; padding: 0; }
-        .xp-list li, .edu-list li { margin-bottom: 12px; padding-left: 20px; position: relative; }
-        .xp-list li::before { content: "✔"; position: absolute; left: 0; color: var(--accent); }
-        .edu-list li::before { content: "🎓"; position: absolute; left: 0; }
+        .project-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.2s ease;
+        }
+        .project-item:hover { transform: translateY(-3px); border-color: var(--secondary); }
+        .project-item h3 { margin: 0 0 5px 0; font-size: 1rem; color: var(--secondary); }
+        .project-item p { margin: 0 0 10px 0; font-size: 0.88rem; line-height: 1.4; color: #475569; }
+        .project-link { color: var(--accent); text-decoration: none; font-weight: bold; font-size: 0.85rem; }
 
-        .edu-item { margin-bottom: 15px; }
-        .edu-item strong { color: var(--primary); }
-        .edu-item span { color: var(--secondary); font-size: 0.9rem; display: block; }
+        .xp-list { list-style: none; padding: 0; }
+        .xp-list li { margin-bottom: 12px; padding-left: 20px; position: relative; }
+        .xp-list li::before { content: "✔"; position: absolute; left: 0; color: var(--accent); }
 
         @media (max-width: 850px) { 
             .container { grid-template-columns: 1fr; margin-top: 20px; }
@@ -112,9 +120,9 @@
     <div class="contact-info">
         <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:anssi.xo1.exe@gmail.com">anssi.xo1.exe@gmail.com</a></div>
         <div class="contact-item"><i class="fas fa-phone"></i> <a href="tel:0686202004">06 86 20 20 04</a></div>
-        <div class="contact-item"><i class="fas fa-globe"></i> <a href="https://korneevscp.github.io/korneevscp-portfolio.github.io/" target="_blank">Portfolio : korneevscp.github.io</a></div>
+        <div class="contact-item"><i class="fas fa-globe"></i> <a href="https://korneevscp.github.io/korneevscp-portfolio.github.io/" target="_blank">Portfolio : korneevscp-portfolio.github.io</a></div>
         <div class="contact-item"><i class="fab fa-github"></i> <a href="https://github.com/korneevscp" target="_blank">github.com/korneevscp</a></div>
-        <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Recherche : Paris & Île-de-France</div>
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Paris & Île-de-France</div>
     </div>
 </header>
 
@@ -125,23 +133,23 @@
             <p><strong>Âge :</strong> 22 ans (2003)</p>
             <p><strong>Origine :</strong> Russe</p>
             <p><strong>Mobilité :</strong> Paris / Remote</p>
-            <p>Passionné par l'informatique bas niveau, la sécurité offensive et le scripting.</p>
+            <p>Spécialisé en informatique bas niveau, sécurité offensive et automatisation système.</p>
         </div>
 
         <div class="card">
             <h2><i class="fas fa-university"></i> Formation</h2>
-            <div class="edu-item">
-                <strong>Holberton School</strong>
-                <span>Spécialisation Informatique & Développement</span>
+            <div style="margin-bottom: 15px;">
+                <strong style="color: var(--primary);">Holberton School</strong>
+                <span style="color: var(--secondary); font-size: 0.9rem; display: block;">Spécialisation Développement Logiciel</span>
             </div>
-            <div class="edu-item">
-                <strong>Plateforme Udemy</strong>
-                <span>Auto-formation continue (Cyber & Réseaux)</span>
+            <div>
+                <strong style="color: var(--primary);">Auto-formation (Udemy/HackTheBox)</strong>
+                <span style="color: var(--secondary); font-size: 0.9rem; display: block;">Cyber-sécurité & Administration Réseaux</span>
             </div>
         </div>
 
         <div class="card">
-            <h2><i class="fas fa-code"></i> Langages</h2>
+            <h2><i class="fas fa-code"></i> Stack Technique</h2>
             <div class="tag-container" id="lang-tags"></div>
         </div>
     </aside>
@@ -149,56 +157,59 @@
     <main>
         <div class="card">
             <h2><i class="fas fa-network-wired"></i> Expertise Réseaux & Hardware</h2>
-            <p>Maîtrise opérationnelle des environnements réseaux critiques :</p>
+            <p>Gestion d'infrastructures et maintenance critique :</p>
             <ul class="xp-list">
-                <li><strong>Architecture :</strong> Routage, Switching, VLANs via <strong>Packet Tracer</strong>.</li>
-                <li><strong>IoT & ToIP :</strong> Configuration de téléphones IP et caméras de surveillance.</li>
-                <li><strong>Maintenance :</strong> Diagnostic matériel sur tours centrales et serveurs Windows/Linux.</li>
+                <li><strong>Réseaux :</strong> VLANs, Routage, Switching (Cisco Packet Tracer).</li>
+                <li><strong>IoT/ToIP :</strong> Déploiement de solutions de téléphonie IP et surveillance.</li>
+                <li><strong>Hardware :</strong> Diagnostic et maintenance de serveurs et stations de travail.</li>
             </ul>
         </div>
 
         <div class="card">
-            <h2><i class="fas fa-terminal"></i> Systèmes & Sécurité</h2>
-            <div class="tag-container" id="os-tags"></div>
-            <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
-                Utilisation avancée de distributions axées sécurité (Kali, Parrot) et administration serveur (Arch, Linux/Windows Server).
-            </p>
+            <h2><i class="fas fa-flask"></i> Projets & Contributions GitHub</h2>
+            
+            <div class="project-item">
+                <h3><i class="fas fa-user-shield"></i> Windows Detection Intrusion</h3>
+                <p>Script de sécurité avancée pour la surveillance et l'alerte en temps réel sur les activités suspectes Windows.</p>
+                <a href="https://github.com/korneevscp/windows-d-tection-intrusion-" target="_blank" class="project-link"><i class="fab fa-github"></i> Explorer le projet</a>
+            </div>
+
+            <div class="project-item">
+                <h3><i class="fas fa-ghost"></i> Shadow-Demon V1.0</h3>
+                <p>Framework d'automatisation polyvalent pour l'optimisation de tâches et l'assistance aux tests de pénétration.</p>
+                <a href="https://github.com/korneevscp/shadow-Demon-V1.0.exe" target="_blank" class="project-link"><i class="fab fa-github"></i> Explorer le projet</a>
+            </div>
+
+            <div class="project-item">
+                <h3><i class="fas fa-tachometer-alt"></i> FSB Consol BAT Optimisation</h3>
+                <p>Suite d'optimisation système via Batch pour réduire la latence et maximiser les performances Windows.</p>
+                <a href="https://github.com/korneevscp/FSB_Consol_BAT_OPTIMISATION_WINDOSE" target="_blank" class="project-link"><i class="fab fa-github"></i> Explorer le projet</a>
+            </div>
         </div>
 
         <div class="card">
-            <h2><i class="fas fa-flask"></i> Projets & Réalisations</h2>
-            <p>Retrouvez mes travaux détaillés sur mon <a href="https://korneevscp.github.io/korneevscp-portfolio.github.io/" target="_blank" style="color: var(--secondary); font-weight: bold;">Portfolio</a> et mon <strong>GitHub</strong> :</p>
-            <div class="tag-container">
-                <span class="tag special">Programmation GLua (Scripting SCP-RP)</span>
-                <span class="tag special">Automatisation Python & Bash</span>
-                <span class="tag special">Projets Arduino IoT</span>
-            </div>
-            <p style="margin-top: 15px; font-size: 0.9rem; font-style: italic;">
-                Ma formation chez Holberton m'a permis d'acquérir une rigueur de code et une approche de résolution de problèmes par la pratique.
+            <h2><i class="fas fa-terminal"></i> Systèmes & Sécurité Offensive</h2>
+            <div class="tag-container" id="os-tags"></div>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
+                Maîtrise de l'administration et de l'audit sur environnements Linux (Arch, Kali) et Windows Server.
             </p>
         </div>
 
         <div class="card" style="background: var(--primary); color: white; text-align: center;">
-            <p style="margin: 0; font-weight: bold;">En recherche active d'opportunités sur Paris et sa périphérie.</p>
+            <p style="margin: 0; font-weight: bold;">En recherche active d'un poste en IDF ou en Télétravail.</p>
         </div>
     </main>
 </div>
 
 <script>
-    const languages = ["C", "Python", "HTML", "CSS", "PHP", "Bash", "Arduino", "JavaScript", "GLua"];
+    const languages = ["C", "Python", "HTML/CSS", "PHP", "Bash", "Arduino", "JavaScript", "GLua"];
     const systems = ["Linux Server", "Parrot OS", "Kali Linux", "Arch Linux", "Windows Server"];
-
     const langContainer = document.getElementById('lang-tags');
     const osContainer = document.getElementById('os-tags');
-
-    languages.forEach(l => {
-        langContainer.innerHTML += `<span class="tag">${l}</span>`;
-    });
-
-    systems.forEach(s => {
-        osContainer.innerHTML += `<span class="tag special">${s}</span>`;
-    });
+    languages.forEach(l => { langContainer.innerHTML += `<span class="tag">${l}</span>`; });
+    systems.forEach(s => { osContainer.innerHTML += `<span class="tag special">${s}</span>`; });
 </script>
 
 </body>
 </html>
+
